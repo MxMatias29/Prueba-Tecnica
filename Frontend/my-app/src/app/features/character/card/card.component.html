@@ -1,0 +1,27 @@
+<section>
+    <div class="flex flex-wrap m-1">
+        <div class="w-full">
+            <div class="bg-gray-700 rounded-lg flex items-center">
+                <img class="h-40 w-30 rounded object-cover object-center mr-3" src="{{ character().image }}"
+                    alt="{{ character().name }}" [routerLink]="['/character', character().id]" />
+                <div class="text-left flex-1 min-w-[350px]">
+                    <h2 class="text-white font-extrabold text-xl mt-1" [routerLink]="['/character', character().id]">
+                        {{ character().name }}
+                    </h2>
+                    <div class="flex items-center mb-4">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-1"></div>
+                        <h3 class="tracking-widest text-white text-xs font-medium title-font">
+                            {{ character().status }} - {{ character().species }}
+                        </h3>
+                    </div>
+
+                    <p class="text-gray-400 text-xs mb-1">Last known location</p>
+                    <p class="text-orange-500 text-xs mb-4 mr-3">{{ character().location.name }}</p>
+
+                    <p class="text-gray-400 text-xs mb-1">First seen in</p>
+                    <p class="text-white text-xs mb-2">{{ character().firstEpisode}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

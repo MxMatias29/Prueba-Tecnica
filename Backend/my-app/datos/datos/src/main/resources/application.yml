@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: informacion-datos
+
+server:
+  port: 8090
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+rickandmorty:
+  api:
+    url: https://rickandmortyapi.com/api/

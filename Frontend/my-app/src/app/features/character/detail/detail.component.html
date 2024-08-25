@@ -1,0 +1,46 @@
+<section class="body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <img alt="character image" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+                priority ngSrc="{{character()?.image}}">
+
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <div class="mb-8">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">Name:</h3>
+                    <h1 class="text-orange-400 text-3xl font-medium">{{character()?.name}}</h1>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">Status:</h3>
+                    <h1 class="text-xl font-medium">{{character()?.status}}</h1>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">Species:</h3>
+                    <h1 class="text-gray-200 text-xl font-medium">{{character()?.species}}</h1>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">Type:</h3>
+                    <h1 class="text-gray-200 text-xl font-medium">
+                        {{character()?.type || 'No type'}}
+                    </h1>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">Gender:</h3>
+                    <h1 class="text-gray-200 text-xl font-medium">{{character()?.gender}}</h1>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">Origin:</h3>
+                    <h1 class="text-gray-200 text-xl font-medium">{{character()?.origin?.name}}</h1>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">Location:</h3>
+                    <h1 class="text-gray-200 text-xl font-medium">{{character()?.location?.name}}</h1>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-gray-400 text-sm title-font tracking-widest">First Episode:</h3>
+                    <h1 class="text-gray-200 text-xl font-medium">{{character()?.firstEpisode}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

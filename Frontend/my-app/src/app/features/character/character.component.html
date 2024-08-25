@@ -1,0 +1,29 @@
+<section class="text-gray-600 body-font">
+    <div class="flex justify-end mt-10 mr-16 ">
+        <button (click)="downloadExcel()"
+            class="btn bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 hover:text-yellow-400 transition duration-300">
+            Download Excel for Page
+        </button>
+    </div>
+    <div class="container px-4 py-24 mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            @for (character of characters(); track $index) {
+            <div
+                class="flex justify-center shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                <app-card [character]="character" />
+            </div>
+            }
+        </div>
+    </div>
+    <div class="flex items-center justify-center mt-8 mb-8">
+        <button (click)="previousPage()" [disabled]="currentPage === 1"
+            class="btn bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 hover:text-yellow-400 transition duration-300">
+            Previous
+        </button>
+        <span class="mx-4 text-cyan-50 font-medium">Page {{ currentPage }} of {{ totalPages }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages"
+            class="btn bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-600 hover:text-yellow-400 transition duration-300">
+            Next
+        </button>
+    </div>
+</section>
