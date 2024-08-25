@@ -48,17 +48,6 @@ public class CharacterController {
         return ResponseEntity.ok(character);
     }
 
-    @GetMapping("/search/")
-    public ResponseEntity<List<CharacterDTO>> searchCharacterByName(@RequestParam("name") String name) {
-
-        List<CharacterDTO> characters = characterService.searchCharacterByName(name);
-
-        if (characters.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.ok(characters);
-    }
-
     @GetMapping("/export/excel")
     public ResponseEntity<byte[]> exportToExcel(@RequestParam(value = "page", required = false, defaultValue = "1") int page) {
         try {

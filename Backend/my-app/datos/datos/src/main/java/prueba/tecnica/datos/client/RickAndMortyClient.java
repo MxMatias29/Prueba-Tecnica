@@ -20,8 +20,4 @@ public interface RickAndMortyClient {
 
     @GetMapping("/episode/{id}")
     Episode getEpisodeById(@PathVariable("id") int id);
-
-    @GetMapping("character/")
-    CharacterResponse searchCharacterByName(@RequestParam(value = "name", required = false) String name);
-
 }

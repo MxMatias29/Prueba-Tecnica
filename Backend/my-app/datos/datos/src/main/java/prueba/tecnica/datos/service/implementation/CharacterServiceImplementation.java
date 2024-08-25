@@ -34,11 +34,4 @@ public class CharacterServiceImplementation implements CharacterService {
         return characterMapperService.mapCharacterToDetailDTO(rickAndMortyClient.getCharacterById(id));
     }
 
-    @Override
-    public List<CharacterDTO> searchCharacterByName(String name) {
-        CharacterResponse response = rickAndMortyClient.searchCharacterByName(name);
-        return response.getAllCharacters().stream()
-                .map(characterMapperService::mapCharacterToDTO)
-                .collect(Collectors.toList());
-    }
 }

@@ -11,5 +11,4 @@ public interface CharacterService {
 
     CharacterDetailDTO getCharacterById(int id);
 
-    List<CharacterDTO> searchCharacterByName(String name);
 }
